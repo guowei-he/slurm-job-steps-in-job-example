@@ -1,0 +1,10 @@
+./lapack-example 5000; echo "finished 1";
+./lapack-example 5000; echo "finished 2";
+./lapack-example 5000; echo "finished 3";
+./lapack-example 5000; echo "finished 4";
+./lapack-example 5000; echo "finished 5";
+./lapack-example 5000; echo "finished 6";
+./lapack-example 5000; echo "finished 7";
+./lapack-example 5000; echo "finished 8";
+./lapack-example 5000; echo "finished 9";
+./lapack-example 5000; echo "finished 10";
