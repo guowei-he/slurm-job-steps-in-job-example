@@ -25,6 +25,8 @@ echo "Master mind starts here"
 # Loop over all tasks. srun them in the background in-place.
 # These 10 tasks will be scheduled in the 4-CPU job allocation
 # 1-4 will be finished first. Then 5-8, 9-10
+# squeue -j <jobid> -s will gives the job steps running.
+# No more than 4 job steps will be running at the same time.
 commands_file="my-commands"
 nlines=`wc -l ${commands_file} | cut -f1 -d' '`
 if [[ ! -d "./tmp" ]]; then

@@ -25,8 +25,10 @@ echo "Master mind starts here"
 # Get container job id from argument
 container_job_id="$1"
 
-# Loop over all tasks. srun them in the background in-place.
-# These tasks will be scheduled within the container job
+# Loop over all tasks. srun dispatch them to the container job.
+# These tasks will be scheduled within the container job, with 4 cores.
+# squeue -j <jobid> -s will show the running job steps.
+# No more than 4 job steps will be running at the same time.
 commands_file="my-commands"
 nlines=`wc -l ${commands_file} | cut -f1 -d' '`
 if [[ ! -d "./tmp" ]]; then
